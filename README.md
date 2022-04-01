@@ -33,9 +33,9 @@ The main objective of this challenge is to test your skills in Front-end Develop
 
 # Intructions
 
-- Create a new fork of this project and a branch with your first-last name and make a pull request when you're done; 
-- We'll do code review;
-- Use your repository's main README to tell us how it was solving your test, the decisions you made, how you organized and separated your code, and especially the instructions on how to run your project;
+- Create a new fork of this repository and a branch with your first-last name and make a pull request when you're done; 
+- We'll do the code review;
+- Use your repository's main README to tell us how you solved the problem;
 
 > Tip: Create coherent commits that tell the story of your project.
 
