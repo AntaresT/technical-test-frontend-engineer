@@ -8,10 +8,21 @@ export const Container = styled.div `
   justify-content: center;
   position: absolute;
   width: 100%;
+  
+  @media (min-width: 320px) and (max-width: 720px){
+    position: ${props => props.position? 'absolute' : 'relative'};
+  }
+  
 `
 
 export const ContentSection = styled.div `
   display: flex;
   justify-content: space-around;
-  width: 600px;
+  margin-top: 10px;
+  width: 800px;
+
+  @media (min-width: 320px) and (max-width: 720px){
+    width: 300px;
+    flex-direction: column-reverse;
+  }
 `

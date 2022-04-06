@@ -7,7 +7,6 @@ import SweeperLogo from '../../assets/Logo_music_SVG.svg'
 function SearchBox ({searchItem, onChange, addVideosList, addAttraction}) {
 
   async function getVideosIdList (item) {
-    console.log(item, 'itemSearch')
     await videos.getVideosId(`?part=snippet&q=${item}`)
     .then((res) => {
       let resData = res.data.items
@@ -21,7 +20,6 @@ function SearchBox ({searchItem, onChange, addVideosList, addAttraction}) {
   }
 
   async function getAttraction (bandName) {
-    console.log(bandName, 'band')
     await ticketMaster.getEvents(`?apikey=${process.env.REACT_APP_TICKETMASTER_KEY}&keyword=${bandName}`)
     .then((res) => {
       addAttraction(res.data._embedded.attractions[0])
@@ -36,12 +34,18 @@ function SearchBox ({searchItem, onChange, addVideosList, addAttraction}) {
     getAttraction(searchItem)
   }
 
+  function keyboardHandler (target) {
+    if (target.code === 'Enter'){
+      handleSubmit()
+    }
+  }
+
   return(
     <Container>
       <Logo src={SweeperLogo} alt="logo" />
       <Title>Band Sweeper</Title>
       <InputSection>
-        <SearchBar type='text' value={searchItem} onChange={onChange} />
+        <SearchBar type='text' value={searchItem} onChange={onChange} onKeyDown={(e) => {keyboardHandler(e)}}/>
         <SubmitBtn type='submit' onClick={handleSubmit}>Search</SubmitBtn>
       </InputSection>
     </Container>

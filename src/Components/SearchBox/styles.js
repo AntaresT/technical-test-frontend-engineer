@@ -16,6 +16,7 @@ export const Container = styled.div `
 export const SearchBar = styled.input `
   border-radius: 6px;
   height: 30px;
+  margin-right: 10px;
   width: 400px;
   
   @media (min-width: 320px) and (max-width: 720px){
