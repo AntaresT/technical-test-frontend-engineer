@@ -12,7 +12,7 @@ function Sweeper () {
   const [attractionInfo, setAttractionInfo] = useState({});
 
   return(
-    <Container position={itemToSearch===''? true : false}>
+    <Container position={videosList===[]? true : false}>
       <SearchBox 
         searchItem={itemToSearch} 
         onChange={ (e) => {setItemToSearch(e.target.value)} }
