@@ -2,9 +2,11 @@ import styled from 'styled-components'
 
 export const Container = styled.div `  
 
+  align-items: center;
   display: flex;
   flex-direction: column;
   text-align: center;
+
 
   @media (min-width: 320px) and (max-width: 720px){
     align-items: center;
@@ -53,4 +55,9 @@ export const InputSection = styled.div`
     flex-direction: column;
   }
 
+`
+
+export const Logo = styled.img `
+  height: 200px;
+  width: 200px;
 `
